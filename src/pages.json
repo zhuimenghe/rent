@@ -1,0 +1,3633 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      "^c-(.*)": "@/components/common/$1/$1.vue",
+      "^b-(.*)": "@/components/business/$1/$1.vue",
+      "^p-(.*)": "@/components/common/painter/$1/$1.vue",
+      "^s-(.*)": "@/components/common/sany/$1.vue"
+    }
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/main/home/home-static",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/login",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "",
+        "transparentTitle": "always"
+      }
+    },
+    // {
+    //     "path": "pages/main/home",
+    //     "style": {
+    //         "navigationStyle": "custom"
+    //     }
+    // },
+    {
+      "path": "pages/main/map",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/main/business",
+      "style": {
+        "navigationStyle": "custom",
+        "bounce": false,
+        "enablePullDownRefresh": true,
+        "pullToRefresh": {
+          "style": "circle",
+          "offset": "70px",
+          "color": "#E60000"
+        }
+      }
+    },
+    {
+      "path": "pages/main/home/home-function-list",
+      "style": {
+        "navigationBarTitleText": "全部功能",
+        "transparentTitle": "none"
+      }
+    },
+    // {
+    //     "path": "pages/main/function-list",
+    //     "style": {
+    //         "navigationStyle": "custom"
+    //     }
+    // },
+    {
+      "path": "pages/main/setting",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    //附件上传-------------------------------------------------------------------------------------------------------------
+    {
+      "path": "components/common/image-upload/upload_zb_apendix",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "附件上传",
+        "bounce": false
+      }
+    },
+    {
+      "path": "components/common/image-upload/share_setting",
+      "style": {
+        "navigationBarTitleText": "附件上传",
+        "bounce": false
+      }
+    },
+    {
+      "path": "pages/main/developing",
+      "style": {
+        "navigationBarTitleText": "功能开发"
+      }
+    },
+    {
+      "path": "pages/main/webview",
+      "style": {
+        "navigationBarTitleText": "法律声明和隐私条款"
+      }
+    },
+    //设备扫码
+    {
+      "path": "pages/main/machine-scan-home",
+      "style": {
+        "navigationBarTitleText": "设备",
+        "transparentTitle": "none"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "deviceNoticePages",
+      "pages": [
+        //设备任务下发------------------------------------------------------------
+        {
+          "path": "my-notify/my-notify-total",
+          "style": {
+            "navigationBarTitleText": "待办任务",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "my-notify/rules-levels-list",
+          "style": {
+            "navigationBarTitleText": "项目内容",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "notify-send/notify-send-total",
+          "style": {
+            "navigationBarTitleText": "待下发任务",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-record/notify-record-total",
+          "style": {
+            "navigationBarTitleText": "任务记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/notify-finish-record",
+          "style": {
+            "navigationBarTitleText": "已办任务",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-repair",
+          "style": {
+            "navigationBarTitleText": "关联维修单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-repair-record",
+          "style": {
+            "navigationBarTitleText": "关联维修单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-maintain",
+          "style": {
+            "navigationBarTitleText": "关联保养单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-hostling",
+          "style": {
+            "navigationBarTitleText": "关联检修单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-polling",
+          "style": {
+            "navigationBarTitleText": "关联巡检单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify-finish/connect-battery-polling",
+          "style": {
+            "navigationBarTitleText": "关联电池巡检",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "root": "otherPages",
+      "pages": [
+        {
+          "path": "data-charts/data-charts",
+          "style": {
+            "navigationBarTitleText": "数据图表",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "global-search/global-search",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "77px"
+            }
+          }
+        },
+        //电签：--------------------------------------------------------------------------------------------------------
+        {
+          "path": "esign/esign-start-process",
+          "style": {
+            "navigationBarTitleText": "启动电签流程",
+            "bounce": false
+          }
+        },
+        {
+          "path": "esign/esign-start-success",
+          "style": {
+            "navigationBarTitleText": "签署发起成功",
+            "bounce": false
+          }
+        },
+        // {
+        //   "path": "esign/esign-start-process-workin",
+        //   "style": {
+        //     "navigationBarTitleText": "启动电签流程",
+        //     "bounce": false,
+        //     "navigationStyle": "custom"
+        //   }
+        // },
+        {
+          "path": "esign/certify-manage",
+          "style": {
+            "navigationBarTitleText": "认证管理",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "esign/webView",
+          "style": {
+            "navigationBarTitleText": "签署详情",
+            "bounce": false
+          }
+        },
+        {
+          "path": "esign/esignList",
+          "style": {
+            "navigationBarTitleText": "签署记录",
+            "bounce": false,
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "esign/esign-company-contact-list",
+          "style": {
+            "navigationBarTitleText": "联系人",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        // ,
+        // "app-plus": {
+        // 	"titleNView": {
+        // 		"titleSize": "16px",
+        // 		"buttons": [{
+        // 			"text": "新增",
+        // 			"type": "none",
+        // 			"fontSize": "14px",
+        // 			"color": "#E60000",
+        // 			"width": "auto"
+        // 		}]
+        // 	}
+        // }
+        {
+          "path": "esign/esign-flow-detail",
+          "style": {
+            "navigationBarTitleText": "电签详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        }, //图表-tab-----------------------------------------------------------------------------------------
+        {
+          "path": "esign/esign-flow-config",
+          "style": {}
+        },
+        {
+          "path": "esign/esign-record",
+          "style": {
+            "navigationBarTitleText": "签署记录",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        //客户管理-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "linkman/linkman",
+          "style": {
+            "navigationBarTitleText": "客户列表",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "linkman/linkman-company-list",
+          "style": {
+            "navigationBarTitleText": "联系人",
+            "bounce": false
+          }
+        },
+        {
+          "path": "linkman/company-creat",
+          "style": {
+            "navigationBarTitleText": "新增企业客户",
+            "bounce": false
+          }
+        },
+        {
+          "path": "linkman/sms-dunning",
+          "style": {
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "linkman/person-creat",
+          "style": {
+            "navigationBarTitleText": "新增个人客户",
+            "bounce": false
+          }
+        },
+        {
+          "path": "linkman/custom-admin",
+          "style": {
+            "navigationBarTitleText": "客户管理",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "linkman/custom-detail",
+          "style": {
+            "navigationBarTitleText": "客户详情"
+          }
+        },
+        {
+          "path": "linkman/custom-proceed",
+          "style": {
+            "navigationBarTitleText": "新建客户收款"
+          }
+        },
+        {
+          "path": "linkman/custom-proceed-contract-fees",
+          "style": {
+            "navigationBarTitleText": "详细分配"
+          }
+        },
+        {
+          "path": "linkman/connect-create",
+          "style": {
+            "navigationBarTitleText": "新增联系人",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "linkman/phone-contract-list",
+          "style": {
+            "navigationBarTitleText": "通讯录",
+            "bounce": false
+          }
+        }, //物流管理------------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "logistics/logistics-record",
+          "style": {
+            "navigationBarTitleText": "物流记录",
+            "bounce": false,
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/logistics-company-list",
+          "style": {
+            "navigationBarTitleText": "物流公司",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "logistics/company-detail",
+          "style": {
+            "navigationBarTitleText": "物流公司详情",
+            "bounce": false,
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/company-updata",
+          "style": {
+            "navigationBarTitleText": "修改物流公司信息",
+            "bounce": false
+          }
+        },
+        {
+          "path": "logistics/logstics-record/logistics-record-detail",
+          "style": {
+            "navigationBarTitleText": "物流记录详情",
+            "bounce": false
+          }
+        },
+        {
+          "path": "logistics/logistics-company/create-company",
+          "style": {
+            "navigationBarTitleText": "新增物流公司",
+            "bounce": false,
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/logistics-manage",
+          "style": {
+            "navigationBarTitleText": "我方物流",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "logistics/choose-logistics-vehicle",
+          "style": {
+            "navigationBarTitleText": "选择车辆",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "logistics/choose-logistics-driver",
+          "style": {
+            "navigationBarTitleText": "选择司机",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "logistics/choose-logistics-driver-contract",
+          "style": {
+            "navigationBarTitleText": "选择司机",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "logistics/logstics-record/choose-device",
+          "style": {
+            "navigationBarTitleText": "选择运输车辆",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "logistics/logstics-record/choose-driver",
+          "style": {
+            "navigationBarTitleText": "选择司机",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "logistics/logistics-pay/logistics-pay-list",
+          "style": {
+            "navigationBarTitleText": "物流应付",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/operationList",
+          "style": {
+            "navigationBarTitleText": "操作证管理",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/operationAdd",
+          "style": {
+            "navigationBarTitleText": "新增操作证",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "logistics/sealAdd",
+          "style": {
+            "navigationBarTitleText": "选择印章",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "logistics/logistics-pay/logistics-pay-create",
+          "style": {
+            "navigationBarTitleText": "新建物流应付",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "logistics/logistics-pay/chooseTransCompany",
+          "style": {
+            "navigationBarTitleText": "选择物流公司",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/logistics-pay/chooseTransList",
+          "style": {
+            "navigationBarTitleText": "选择货物记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "logistics/logistics-pay/logistics-pay-detail",
+          "style": {
+            "navigationBarTitleText": "物流应付详情",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        }, //地图--------------------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "map/nvr-map",
+          "style": {
+            "navigationBarTitleText": "选择地点",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "map/map-search",
+          "style": {
+            "navigationBarTitleText": "搜索",
+            "bounce": false
+          }
+        },
+        {
+          "path": "map/search-device",
+          "style": {
+            "navigationBarTitleText": "设备搜索",
+            "bounce": false
+          }
+        }, //重要通知-------------------------------------------------------------------------------------------------------------
+        {
+          "path": "notify/importance-notification",
+          "style": {
+            "navigationBarTitleText": "重要提醒",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "notify/business-apply",
+          "style": {
+            "navigationStyle": "custom"
+            // "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "notify/notification-tabbar",
+          "style": {
+            // "navigationStyle": "custom",
+            "navigationBarTitleText": "消息待办",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "notify/settle-notifications",
+          "style": {
+            // "navigationStyle": "custom",
+            "navigationBarTitleText": "结算待办",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+         //逾期--------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "overdue/overdue-record",
+          "style": {
+            "navigationBarTitleText": "逾期记录",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        }, //设置------------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "setting/mymessage",
+          "style": {
+            "navigationBarTitleText": "账号信息",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/resetMM",
+          "style": {
+            "navigationBarTitleText": "修改密码",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/help-list",
+          "style": {
+            "navigationBarTitleText": "帮助",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/phone-setting",
+          "style": {
+            "navigationBarTitleText": "手机设置",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/notice-setting",
+          "style": {
+            "navigationBarTitleText": "消息提醒",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/wx-qrcode",
+          "style": {
+            "navigationBarTitleText": "微信公众号",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "setting/modify-pwd",
+          "style": {
+            "navigationBarTitleText": "修改初始密码",
+            "transparentTitle": "always"
+          }
+        },
+        // {
+        //     "path": "setting/config-add-menu",
+        //     "style": {
+        //         "navigationBarTitleText": "管理新增功能",
+        //         "bounce": false,
+        //         "app-plus": {
+        //             "titleNView": {
+        //                 "titleSize": "16px",
+        //                 "buttons": [
+        //                     {
+        //                         "text": "保存",
+        //                         "type": "none",
+        //                         "fontSize": "14px",
+        //                         "color": "#E60000",
+        //                         "width": "auto"
+        //                     }
+        //                 ]
+        //             }
+        //         }
+        //     }
+        // },
+        //转租---------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "sublet/sublet-apply/sublet-company/sublet-company-list",
+          "style": {
+            "navigationBarTitleText": "转租公司",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-company/create-sublet-company",
+          "style": {
+            "navigationBarTitleText": "新增转租公司",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-company/sublet-company-detail",
+          "style": {
+            "navigationBarTitleText": "转租公司详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-device/sublet-device-fee",
+          "style": {
+            "navigationBarTitleText": "转租费用估算",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-device/sublet-device-add",
+          "style": {
+            "navigationBarTitleText": "添加转租设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-device/sublet-device-updata",
+          "style": {
+            "navigationBarTitleText": "修改转租设备信息",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-pause/create-sublet-pause",
+          "style": {
+            "navigationBarTitleText": "新增转租报停",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-pause/choose-sublet-apply-list",
+          "style": {
+            "navigationBarTitleText": "选择转租公司",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "sublet/sublet-pause/choose-sublet-compay-carlist",
+          "style": {
+            "navigationBarTitleText": "选择转租设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "sublet/sublet-pause/sublet-pause-detail",
+          "style": {
+            "navigationBarTitleText": "转租报停详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-device/sublet-device-list",
+          "style": {
+            "navigationBarTitleText": "转租设备",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none"
+            // "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-tab",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-choose-company",
+          "style": {
+            "navigationBarTitleText": "转租公司",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/choose-device-all",
+          "style": {
+            "navigationBarTitleText": "选择车辆",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-apply-detail",
+          "style": {
+            "navigationBarTitleText": "转租详情",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-apply",
+          "style": {
+            "navigationBarTitleText": "转租详情审批",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/create-sublet",
+          "style": {
+            "navigationBarTitleText": "新建转租申请",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-pay/sublet-pay-detail",
+          "style": {
+            "navigationBarTitleText": "转租应付详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-pay/sublet-pay-add",
+          "style": {
+            "navigationBarTitleText": "转租应付新增",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-pay/sublet-pay-finish",
+          "style": {
+            "navigationBarTitleText": "转租已付",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/sublet-device/sublet-device-detail",
+          "style": {
+            "navigationBarTitleText": "转租设备详情",
+            "transparentTitle": "none"
+          }
+        }
+      ]
+    },
+    {
+      "root": "subBusiness",
+      "pages": [
+        {
+          "path": "subBusiness",
+          "style": {
+            "navigationStyle": "custom",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "root": "subOtherPages",
+      "pages": [
+        {
+          "path": "sublet/sublet-apply/sublet-device-detail",
+          "style": {
+            "navigationBarTitleText": "转租设备详情",
+            "enablePullDownRefresh": true,
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sublet/sublet-apply/life-circle-flitter",
+          "style": {
+            "navigationBarTitleText": "个性化",
+            "transparentTitle": "none"
+          }
+        },
+        //配件-------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "accessories/acc-base/acc-base-list",
+          "style": {
+            "navigationBarTitleText": "配件配置",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-base/create-acc-base",
+          "style": {
+            "navigationBarTitleText": "新增配件配置",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/accessories-all",
+          "style": {
+            "navigationBarTitleText": "配件管理",
+            "navigationStyle": "custom",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-inventory/acc-inverntory-detail",
+          "style": {
+            "navigationBarTitleText": "配件详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-inventory/adjust-price",
+          "style": {
+            "navigationBarTitleText": "调整单价",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/create-acc-storagein",
+          "style": {
+            "navigationBarTitleText": "新增入库单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/edit-storagein-part",
+          "style": {
+            "navigationBarTitleText": "编辑入库配件详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/acc-all-list",
+          "style": {
+            "navigationBarTitleText": "配件列表",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/acc-storagein-detail",
+          "style": {
+            "navigationBarTitleText": "入库单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/acc-storagein-apply",
+          "style": {
+            "navigationBarTitleText": "入库单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-receive/create-acc-recelive",
+          "style": {
+            "navigationBarTitleText": "新增配件出库单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-receive/acc-storage-receive-list",
+          "style": {
+            "navigationBarTitleText": "配件列表",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-receive/acc-recelive-detail",
+          "style": {
+            "navigationBarTitleText": "配件出库单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-receive/acc-recelive-apply",
+          "style": {
+            "navigationBarTitleText": "配件出库单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-back/create-acc-back",
+          "style": {
+            "navigationBarTitleText": "新增配件退回单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-back/acc-receive-choose-list",
+          "style": {
+            "navigationBarTitleText": "出库列表",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-back/acc-receive-back-list",
+          "style": {
+            "navigationBarTitleText": "配件列表",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-back/acc-back-detail",
+          "style": {
+            "navigationBarTitleText": "配件退回单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-back/acc-back-apply",
+          "style": {
+            "navigationBarTitleText": "配件退回单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-allot/create-acc-allot",
+          "style": {
+            "navigationBarTitleText": "新增配件调拨单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-allot/edit-allot-part",
+          "style": {
+            "navigationBarTitleText": "修改配件信息",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "accessories/acc-allot/acc-alloct-stock",
+          "style": {
+            "navigationBarTitleText": "配件列表",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "accessories/acc-allot/acc-allot-detail",
+          "style": {
+            "navigationBarTitleText": "配件调拨单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-allot/acc-allot-apply",
+          "style": {
+            "navigationBarTitleText": "配件调拨单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-inventory/adjust-price-apply",
+          "style": {
+            "navigationBarTitleText": "调整单价审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-inventory/adjust-price-detail",
+          "style": {
+            "navigationBarTitleText": "调整单价详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "accessories/acc-storagein/choose-material-part",
+          "style": {
+            "navigationBarTitleText": "选择已有物料",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        //--------卡券
+        {
+          "path": "coupon/activity",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coupon/order",
+          "style": {
+            "navigationBarTitleText": "填写订单"
+          }
+        },
+        {
+          "path": "coupon/success",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coupon/orderList",
+          "style": {
+            "navigationBarTitleText": "我的订单",
+            "enablePullDownRefresh": false,
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "coupon/couponList",
+          "style": {
+            "navigationBarTitleText": "订单详情"
+          }
+        },
+        {
+          "path": "register/index",
+          "style": {
+            "navigationBarTitleText": "申请成为租户"
+          }
+        },
+        {
+          "path": "homecharts/statistics/contract-revenue-info",
+          "style": {
+            "navigationBarTitleText": "合同营收统计",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/device-statistics-tab",
+          "style": {
+            "navigationBarTitleText": "设备营收统计",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/customer-overdue-list",
+          "style": {
+            "navigationBarTitleText": "客户营收统计",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/staff-revenue-list",
+          "style": {
+            "navigationBarTitleText": "员工营收统计",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/rent-trend-list",
+          "style": {
+            "navigationBarTitleText": "租金详情",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/debt-list",
+          "style": {
+            "navigationBarTitleText": "应收统计",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/config_dynamic_field",
+          "style": {
+            "navigationBarTitleText": "字段显示配置"
+          }
+        },
+        {
+          "path": "homecharts/statistics/device-rate-list",
+          "style": {
+            "navigationBarTitleText": "设备出租率",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "homecharts/statistics/perform-list",
+          "style": {
+            "navigationBarTitleText": "履约营收列表"
+          }
+        },
+        {
+          "path": "homecharts/statistics/device-due-list",
+          "style": {
+            "navigationBarTitleText": "设备到期列表",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "contractPages",
+      "pages": [
+        //业务-合同------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "contract/create-contract",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "新建合同",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "contract/merge-signatures",
+          "style": {
+            // "navigationStyle": "custom",
+            "navigationBarTitleText": "合并电签提示",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "contract/components/enterprise-risk-inquiry",
+          "style": {
+            "navigationBarTitleText": "风险查询",
+            "transparentTitle": "none",
+            "navigationBarBackgroundColor": "#ffffff"
+          }
+        },
+        {
+          "path": "contract/contract-apply",
+          "style": {
+            "navigationBarTitleText": "合同审批",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/contract-simple-apply",
+          "style": {
+            "navigationBarTitleText": "快捷合同审批",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/business-pigeonhole",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "图片附件",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/choose-vehicle",
+          "style": {
+            "navigationBarTitleText": "预租设备",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/vehicleEdit",
+          "style": {
+            "navigationBarTitleText": "预租设备编辑",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/assign-vehicle",
+          "style": {
+            "navigationBarTitleText": "指定设备",
+            "app-plus": {
+              "titleNView": {
+                "buttons": [
+                  {
+                    "float": "left",
+                    "text": "×",
+                    "fontSize": "30px"
+                  }
+                ],
+                "autoBackButton": false
+              }
+            }
+          }
+        },
+        {
+          "path": "contract/assigned-vehicle",
+          "style": {
+            "navigationBarTitleText": "已指定设备",
+            "app-plus": {
+              "titleNView": {
+                "buttons": [
+                  {
+                    "float": "left",
+                    "text": "×",
+                    "fontSize": "30px"
+                  }
+                ],
+                "autoBackButton": false
+              }
+            }
+          }
+        },
+        // {
+        //     "path": "contract/contract-list",
+        //     "style": {
+        //         "navigationBarTitleText": "合同列表",
+        //         "bounce": false
+        //     }
+        // },
+        {
+          "path": "contract/contract-detail",
+          "style": {
+            "navigationBarTitleText": "合同详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "contract/choose-work-content",
+          "style": {
+            "navigationBarTitleText": "选择作业内容",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "contract/contract-list-rubbish",
+          "style": {
+            "navigationBarTitleText": "草稿箱",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "contract/contract-choose-device/contract-choose-device",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "contract/contract-choose-device/edit-device-information",
+          "style": {
+            "navigationBarTitleText": "修改设备信息",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract/create-contract-simple",
+          "style": {
+            "navigationBarTitleText": "新增快捷合同",
+            "bounce": false
+          }
+        },
+        //业务-合同变更-----------------------------------------------------------------------------------------------------------------------
+        // {
+        //     "path": "contract-change/contract-change-list",
+        //     "style": {
+        //         "navigationBarTitleText": "合同变更",
+        //         "bounce": false,
+        //         "enablePullDownRefresh": true,
+        //         "pullToRefresh": {
+        //             "style": "circle",
+        //             "color": "#E60000"
+        //         }
+        //     }
+        // },
+        {
+          "path": "contract-change/create-contract-change",
+          "style": {
+            "navigationBarTitleText": "合同变更",
+            "bounce": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "contract-change/contract-change-detail",
+          "style": {
+            "navigationBarTitleText": "合同变更详情",
+            "navigationStyle": "custom",
+            "bounce": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "contract-change/contract-change-apply",
+          "style": {
+            "navigationBarTitleText": "合同变更审批",
+            "navigationStyle": "custom",
+            "bounce": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        //业务-附加合同-----------------------------------------------------------------------------------------------------------------
+        {
+          "path": "contract-expense/create-contract-expense",
+          "style": {
+            "navigationBarTitleText": "附加合同",
+            "bounce": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "contract-expense/contract-expense-detail",
+          "style": {
+            "navigationBarTitleText": "附加合同详情",
+            "navigationStyle": "custom",
+            "bounce": false
+          }
+        },
+        {
+          "path": "contract-expense/contract-expense-apply",
+          "style": {
+            "navigationBarTitleText": "附加合同审批",
+            "navigationStyle": "custom",
+            "bounce": false,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        // {
+        //     "path": "contract-expense/contract-expense-list",
+        //     "style": {
+        //         "enablePullDownRefresh": true,
+        //         "bounce": false,
+        //         "pullToRefresh": {
+        //             "style": "circle",
+        //             "color": "#E60000"
+        //         }
+        //     }
+        // },
+        //业务-框架合同-------------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "contract-kit/create-contract-kit",
+          "style": {
+            "navigationBarTitleText": "新建框架合同",
+            "bounce": false
+          }
+        }
+      ]
+    },
+    {
+      "root": "businessPages",
+      "pages": [
+        //业务-使用报告-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "useReport/use-report-list",
+          "style": {
+            "navigationBarTitleText": "使用报告"
+          }
+        },
+        {
+          "path": "useReport/use-report-detail",
+          "style": {
+            "navigationBarTitleText": "报告详情"
+          }
+        },
+        //业务-收款-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "proceed/creat-proceeds",
+          "style": {
+            "navigationBarTitleText": "新建收款单",
+            "bounce": false
+          }
+        },
+        {
+          "path": "proceed/porceeds-detail",
+          "style": {
+            "navigationBarTitleText": "收款详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "proceed/proceeds-check",
+          "style": {
+            "navigationBarTitleText": "收款详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //业务-发票-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "invoice/invoice-detail",
+          "style": {
+            "navigationBarTitleText": "发票详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "cost-manage/cost-detail",
+          "style": {
+            "navigationBarTitleText": "成本详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+            // "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "cost-manage/create-cost",
+          "style": {
+            "navigationBarTitleText": "新建成本",
+            "transparentTitle": "none"
+            // "navigationStyle": "custom"
+            // "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "invoice/invoice-check",
+          "style": {
+            "navigationBarTitleText": "发票详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "invoice/contract-choose",
+          "style": {
+            "navigationBarTitleText": "选择合同",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "invoice/contract-choose-settle",
+          "style": {
+            "navigationBarTitleText": "选择合同",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "invoice/creat-invoice", //这个页面没用
+          "style": {
+            "navigationBarTitleText": "新建发票",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "invoice/create-invoice",
+          "style": {
+            "navigationBarTitleText": "新建发票",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "invoice/invoice-apply",
+          "style": {
+            "navigationBarTitleText": "新建发票",
+            "transparentTitle": "none"
+          }
+        },
+        //业务-退款-------------------------------------------------------------------------------------------------------
+        {
+          "path": "reimburse/creat-reimburse",
+          "style": {
+            "navigationBarTitleText": "新建退款单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "reimburse/reimburse-detail",
+          "style": {
+            "navigationBarTitleText": "退款详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "reimburse/reimburse-check",
+          "style": {
+            "navigationBarTitleText": "退款详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "cost-manage/cost-check",
+          "style": {
+            "navigationBarTitleText": "成本详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //业务-索赔----------------------------------------------------------------------------------------------
+        {
+          "path": "claim/creat-claim",
+          "style": {
+            "navigationBarTitleText": "新增业务索赔",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "claim/create-claim-service",
+          "style": {
+            "navigationBarTitleText": "新增服务索赔",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "claim/claim-items",
+          "style": {
+            "navigationBarTitleText": "索赔项",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "claim/claim-choose-machine",
+          "style": {
+            "navigationBarTitleText": "选择车辆",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "claim/claim-choose-contract",
+          "style": {
+            "navigationBarTitleText": "选择合同",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "claim/claim-detail",
+          "style": {
+            "navigationBarTitleText": "索赔详情",
+            "transparentTitle": "none",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "claim/machine-by-contract",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "claim/claim-apply",
+          "style": {
+            "navigationBarTitleText": "索赔申请",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //业务-工作流----------------------------------------------------------------------------------------------------
+        {
+          "path": "workflow/choose-assigner",
+          "style": {
+            "navigationBarTitleText": "选择处理人",
+            "transparentTitle": "none"
+          }
+        },
+        // {
+        //     "path": "workflow/create-step",
+        //     "style": {
+        //         "navigationBarTitleText": "新建流程",
+        //         "transparentTitle": "none"
+        //     }
+        // },
+        // {
+        //     "path": "workflow/approve-step",
+        //     "style": {
+        //         "navigationBarTitleText": "审批",
+        //         "transparentTitle": "none"
+        //     }
+        // },
+        {
+          "path": "workflow/common-approve-list",
+          "style": {
+            "navigationBarTitleText": "通用审批",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "workflow/common-approve",
+          "style": {
+            "navigationBarTitleText": "通用审批",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workflow/common-approve-detail",
+          "style": {
+            "navigationBarTitleText": "通用审批详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workflow/common-approve-check",
+          "style": {
+            "navigationBarTitleText": "通用审批",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        //业务-进场---------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "workin/trans-driver",
+          "style": {
+            "navigationBarTitleText": "公司及联系人",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "workin/trans-company",
+          "style": {
+            "navigationBarTitleText": "物流公司",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "workin/workin-car-choose",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "navigationStyle": "custom",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "workin/workin-car-detaillist",
+          "style": {
+            "navigationBarTitleText": "已选择设备列表",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/check-car-list",
+          "style": {
+            "navigationBarTitleText": "点检列表",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/workin-detail",
+          "style": {
+            "navigationBarTitleText": "进场详情",
+            "navigationStyle": "custom",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/check-car-filter",
+          "style": {
+            "navigationBarTitleText": "筛选",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/work-flow-display",
+          "style": {
+            "navigationBarTitleText": "审批流",
+            "bounce": false
+          }
+        },
+        {
+          "path": "workin/work-flow-write",
+          "style": {
+            "navigationBarTitleText": "添加评论",
+            "bounce": false
+          }
+        },
+        {
+          "path": "workin/work-flow-choosePerson",
+          "style": {
+            "navigationBarTitleText": "选择抄送人员",
+            "bounce": false
+          }
+        },
+        {
+          "path": "workin/choose-order",
+          "style": {
+            "navigationBarTitleText": "选择其他设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/choose-workin-device",
+          "style": {
+            "navigationBarTitleText": "选择进场设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/choose-file-list",
+          "style": {
+            "navigationBarTitleText": "设备附件上传",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workin/delivery-file-list",
+          "style": {
+            "navigationBarTitleText": "物流附件查看",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workin/workIn-equipment-model-choose",
+          "style": {
+            "navigationBarTitleText": "进场设备需求",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/chooseOther",
+          "style": {
+            "navigationBarTitleText": "选择其他设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/create-workin-step-all",
+          "style": {
+            "navigationBarTitleText": "新建进场单",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workin/create-workin-simple",
+          "style": {
+            "navigationBarTitleText": "新建快捷进场单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workin/workin-simple/edit-device-information",
+          "style": {
+            "navigationBarTitleText": "修改设备信息",
+            "bounce": false
+          }
+        },
+        {
+          "path": "workin/workin-simple-detail",
+          "style": {
+            "navigationBarTitleText": "快捷进场详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workin/workin-simple-apply",
+          "style": {
+            "navigationBarTitleText": "快捷进场审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //业务-报停--------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "pause/create-pause",
+          "style": {
+            "navigationBarTitleText": "新增业务报停",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "pause/create-pause-service",
+          "style": {
+            "navigationBarTitleText": "新增服务报停",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "pause/pause-detail",
+          "style": {
+            "navigationBarTitleText": "报停详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "pause/pause-apply",
+          "style": {
+            "navigationBarTitleText": "报停审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "pause/worked-machine-by-contract",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none"
+          }
+        },
+        //业务-退场-----------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "workout/workout-choose-contract",
+          "style": {
+            "navigationBarTitleText": "选择合同",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "workout/create-workout-first",
+          "style": {
+            "navigationBarTitleText": "新建退场单",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workout/create-workout-apply",
+          "style": {
+            "navigationBarTitleText": "退场调度",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workout/workout-car-choose",
+          "style": {
+            "navigationBarTitleText": "调度设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workout/workout-check-list",
+          "style": {
+            "navigationBarTitleText": "退场点检",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workout/workout-machine-detail",
+          "style": {
+            "navigationBarTitleText": "设备详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workout/workout-detail",
+          "style": {
+            "navigationBarTitleText": "退场详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workout/service-receive/workout-receive-machine",
+          "style": {
+            "navigationBarTitleText": "关联接机单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "workout/workout-detail-simple",
+          "style": {
+            "navigationBarTitleText": "快捷退场详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workout/workout-simple-apply",
+          "style": {
+            "navigationBarTitleText": "快捷退场审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "workout/check-store-car-list",
+          "style": {
+            "navigationBarTitleText": "设备检修",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "workout/choose-fence",
+          "style": {
+            "navigationBarTitleText": "选择围栏",
+            "bounce": false
+          }
+        },
+        {
+          "path": "workout/create-workout-simple",
+          "style": {
+            "navigationBarTitleText": "新增快捷退场",
+            "bounce": false
+          }
+        },
+        //业务-结算单----------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "settledown/settle-detail-check",
+          "style": {
+            "navigationBarTitleText": "结算单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-detail",
+          "style": {
+            "navigationBarTitleText": "结算单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-detail-customer",
+          "style": {
+            "navigationBarTitleText": "结算单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-dz-detail-check",
+          "style": {
+            "navigationBarTitleText": "对账单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-dz-detail",
+          "style": {
+            "navigationBarTitleText": "对账单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "default"
+          }
+        },
+        {
+          "path": "settledown/settle-add",
+          "style": {
+            "navigationBarTitleText": "新增结算单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "settledown/collection",
+          "style": {
+            "navigationBarTitleText": "选择收退款单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "settledown/settle-machine",
+          "style": {
+            "navigationBarTitleText": "编辑结算设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "settledown/settled-add",
+          "style": {
+            "navigationBarTitleText": "新建结清单",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-finish-detail",
+          "style": {
+            "navigationBarTitleText": "结清单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settledown/settle-finish-detail-show",
+          "style": {
+            "navigationBarTitleText": "结清单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //业务----进退场补录-----------------------------------------------------------------
+        {
+          "path": "additional-recording/add-record-list",
+          "style": {
+            "navigationStyle": "custom",
+            "bounce": false,
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "120px"
+            }
+          }
+        },
+        {
+          "path": "additional-recording/add-record-detail",
+          "style": {
+            "navigationBarTitleText": "进退场补录单详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "additional-recording/add-record-check",
+          "style": {
+            "navigationBarTitleText": "进退场补录审批",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "additional-recording/create-add-record",
+          "style": {
+            "navigationBarTitleText": "新增进退场补录单",
+            "bounce": false
+          }
+        },
+        {
+          "path": "additional-recording/choose-add-machine",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "bounce": false,
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        //业务-优惠/增收
+        {
+          "path": "discounts/discounts-create",
+          "style": {
+            "navigationBarTitleText": "新增优惠/增收"
+          }
+        },
+        {
+          "path": "discounts/discounts-apply",
+          "style": {
+            "navigationBarTitleText": "优惠/增收审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "discounts/discounts-detail",
+          "style": {
+            "navigationBarTitleText": "优惠/增收详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        // 服务交接机
+        {
+          "path": "service/deliver-machine",
+          "style": {
+            "navigationBarTitleText": "交机记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "service/deliver-machine-add",
+          "style": {
+            "navigationBarTitleText": "新建交机单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "service/receive-machine",
+          "style": {
+            "navigationBarTitleText": "接机记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "service/receive-machine-add",
+          "style": {
+            "navigationBarTitleText": "新建接机单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "service/machine-select",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "service/not-machines",
+          "style": {
+            "navigationBarTitleText": "不符合订单设备列表",
+            "transparentTitle": "none"
+          }
+        },
+        //业务-对账/单
+        {
+          "path": "settle-apply/choose-customer-contract",
+          "style": {
+            "navigationBarTitleText": "选择合同/客户",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            },
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settle-apply/contract/application-contract-create",
+          "style": {
+            "navigationBarTitleText": "新建对账结算申请"
+          }
+        },
+        {
+          "path": "settle-apply/customer/application-customer-create",
+          "style": {
+            "navigationBarTitleText": "新建对账结算申请"
+          }
+        },
+        {
+          "path": "settle-apply/contract/application-contract-apply",
+          "style": {
+            "navigationBarTitleText": "对账结算申请审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settle-apply/contract/application-contract-detail",
+          "style": {
+            "navigationBarTitleText": "对账结算申请详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settle-apply/customer/application-customer-apply",
+          "style": {
+            "navigationBarTitleText": "对账结算申请审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settle-apply/customer/application-customer-detail",
+          "style": {
+            "navigationBarTitleText": "对账结算申请详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "devicePages",
+      "pages": [
+        //设备-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "map-location",
+          "style": {
+            "navigationBarTitleText": "地图定位",
+            "bounce": false
+          }
+        },
+        //设备监控-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "monitor/equipment-monitoring-list",
+          "style": {
+            "navigationStyle": "custom",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "40px",
+              "color": "#E60000"
+            }
+          }
+        },
+        // 密码解锁
+        {
+          "path": "monitor/components/low-battery-voice-reminder",
+          "style": {
+            "navigationBarTitleText": "低电量语音推送",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "40px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "monitor/monitor-filtrate",
+          "style": {
+            "navigationBarTitleText": "筛选",
+            "bounce": false
+          }
+        },
+        {
+          "path": "monitor/device-monitor-detail",
+          "style": {
+            "navigationBarTitleText": "监控详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "monitor/fault-warning-history-record",
+          "style": {
+            "navigationBarTitleText": "故障预警",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "45px"
+            }
+          }
+        },
+        {
+          "path": "monitor/fault-warning-history-list",
+          "style": {
+            "navigationBarTitleText": "故障信息",
+            "navigationStyle": "custom",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        //设备-控制-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "control/lock-vehicle",
+          "style": {
+            "navigationBarTitleText": "设备控制",
+            "navigationBarBackgroundColor": "#ffffff",
+            // "enablePullDownRefresh": true,
+            // "pullToRefresh": {
+            //   "style": "circle",
+            //   "color": "#E60000"
+            // },
+            "bounce": false
+          }
+        },
+        {
+          "path": "control/components/lock-by-password",
+          "style": {
+            "navigationBarTitleText": "密码解锁",
+            "navigationBarBackgroundColor": "#ffffff",
+            // "enablePullDownRefresh": true,
+            // "pullToRefresh": {
+            //   "style": "circle",
+            //   "color": "#E60000"
+            // },
+            "bounce": false
+          }
+        },
+       
+        {
+          "path": "control/history",
+          "style": {
+            "navigationBarTitleText": "控制记录",
+            "navigationBarBackgroundColor": "#ffffff",
+            // "enablePullDownRefresh": true,
+            // "pullToRefresh": {
+            //   "style": "circle",
+            //   "color": "#E60000"
+            // },
+            "bounce": false
+          }
+        },
+        {
+          "path": "control/batch",
+          "style": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationStyle": "custom",
+            // "enablePullDownRefresh": true,
+            // "pullToRefresh": {
+            //   "style": "circle",
+            //   "color": "#E60000"
+            // },
+            "bounce": false
+          }
+        },
+        // {
+        //   "path": "control/all-device-list",
+        //   "style": {
+        //     "navigationBarTitleText": "全部设备",
+        //     "enablePullDownRefresh": true,
+        //     "pullToRefresh": {
+        //       "style": "circle",
+        //       "color": "#E60000",
+        //       "offset": "50px"
+        //     }
+        //   }
+        // },
+        // {
+        //   "path": "control/batch-control",
+        //   "style": {
+        //     "navigationBarTitleText": "车辆列表",
+        //     "enablePullDownRefresh": true
+        //   }
+        // },
+        // {
+        //   "path": "control/controller-record",
+        //   "style": {
+        //     "navigationBarTitleText": "控制记录",
+        //     "bounce": false
+        //   }
+        // },
+        // {
+        //   "path": "control/choose-control-list",
+        //   "style": {
+        //     "navigationBarTitleText": "所选车辆列表",
+        //     "transparentTitle": "none"
+        //   }
+        // },
+        //设备-调拨-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "allot/allot-vehicle",
+          "style": {
+            "navigationBarTitleText": "设备调拨",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "70px"
+            },
+            "bounce": false
+          }
+        },
+        {
+          "path": "allot/allot-apply",
+          "style": {
+            "navigationBarTitleText": "调拨详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "allot/create-allot",
+          "style": {
+            "navigationBarTitleText": "新建调拨",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "allot/allot-car-choose",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "allot/allot-detail",
+          "style": {
+            "navigationBarTitleText": "调拨详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //设备-档案-------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "record/device-record",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "设备档案",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "record/device-record-detail",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "设备详情",
+            "bounce": false
+          }
+        },
+        {
+          "path": "record/device-record-add",
+          "style": {
+            "navigationBarTitleText": "添加设备",
+            "bounce": false
+          }
+        },
+        {
+          "path": "record/rent-record",
+          "style": {
+            "navigationBarTitleText": "租赁记录",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "70px"
+            },
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "record/device-record-flitter",
+          "style": {
+            "navigationBarTitleText": "筛选",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "record/life-circle-flitter",
+          "style": {
+            "navigationBarTitleText": "个性化",
+            "transparentTitle": "none"
+          }
+        },
+        //设备-围栏-------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "fence/fence-list",
+          "style": {
+            "navigationBarTitleText": "电子围栏",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "fence/fence-edit",
+          "style": {
+            "navigationBarTitleText": "编辑围栏",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "fence/correlation-machine",
+          "style": {
+            "navigationBarTitleText": "关联设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "fence/fence-binding",
+          "style": {
+            "navigationBarTitleText": "批量绑定",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "fence/fence-unbinding",
+          "style": {
+            "navigationBarTitleText": "批量解绑",
+            "transparentTitle": "none"
+          }
+        },
+        //设备-维修--------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "repair/create-choose-car",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "repair/create-repair",
+          "style": {
+            "navigationBarTitleText": "新建维修单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "device-contract",
+          "style": {
+            "navigationBarTitleText": "选择合同",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "repair/choose-part-list",
+          "style": {
+            "navigationBarTitleText": "选择配件",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "repair/choose-maintain-list",
+          "style": {
+            "navigationBarTitleText": "选择保养单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "repair/choose-check-list",
+          "style": {
+            "navigationBarTitleText": "选择检修单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "repair/choose-polling-list",
+          "style": {
+            "navigationBarTitleText": "选择巡检单",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "repair/repair-detail",
+          "style": {
+            "navigationBarTitleText": "维修单详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "repair/togger_peson",
+          "style": {
+            "navigationBarTitleText": "选择同行人",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "repair/repair-reason",
+          "style": {
+            "navigationBarTitleText": "选择故障原因",
+            "bounce": false
+          }
+        },
+        {
+          "path": "repair/reparir-detail-check",
+          "style": {
+            "navigationBarTitleText": "维修单审批",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "repair/repair-all",
+          "style": {
+            "navigationBarTitleText": "维修",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        //设备-保养-------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "maintain/maintain-remind-list",
+          "style": {
+            "navigationBarTitleText": "保养提醒",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "maintain/create-maintain",
+          "style": {
+            "navigationBarTitleText": "新建保养单",
+            "bounce": false
+          }
+        },
+        {
+          "path": "maintain/maintain-detail",
+          "style": {
+            "navigationBarTitleText": "保养单详情",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "maintain/maintain-apply",
+          "style": {
+            "navigationBarTitleText": "保养单审批",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "maintain/maintain-record-list",
+          "style": {
+            "navigationBarTitleText": "设备保养",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "maintain/search-maintain-machine",
+          "style": {
+            "navigationBarTitleText": "搜索设备",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "device-maintain-record",
+          "style": {
+            "navigationBarTitleText": "保养记录",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        //设备-巡检-------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "polling/polling-all",
+          "style": {
+            "navigationBarTitleText": "巡检记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "polling/create-polling",
+          "style": {
+            "navigationBarTitleText": "新增巡检单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "polling/polling-detail",
+          "style": {
+            "navigationBarTitleText": "巡检详情",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "polling/polling-detail-check",
+          "style": {
+            "navigationBarTitleText": "巡检单审批",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        //设备-补液--------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "infusion/infusion-list",
+          "style": {
+            "navigationBarTitleText": "补液记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "infusion/infusion-detail",
+          "style": {
+            "navigationBarTitleText": "补液记录详情",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "infusion/infusion-create",
+          "style": {
+            "navigationBarTitleText": "增加补液记录",
+            "transparentTitle": "none"
+          }
+        },
+        //设备-检修----------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "hostling/hostling-all",
+          "style": {
+            "navigationBarTitleText": "设备检修",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "hostling/create-service",
+          "style": {
+            "navigationBarTitleText": "新建检修单",
+            "bounce": false
+          }
+        },
+        {
+          "path": "hostling/stock-detail",
+          "style": {
+            "navigationBarTitleText": "检修单详情",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "hostling/choose-repair",
+          "style": {
+            "navigationBarTitleText": "关联维修单",
+            "bounce": false,
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "hostling/abnormal-item-list",
+          "style": {
+            "navigationBarTitleText": "异常项列表",
+            "bounce": false
+          }
+        },
+        {
+          "path": "hostling/stock-detail-check",
+          "style": {
+            "navigationBarTitleText": "检修单审批",
+            "bounce": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "hostling/check-record",
+          "style": {
+            "navigationBarTitleText": "检修记录",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        //设备-采购---------------------------------------------------------------------------------------------------------------------------
+        {
+          "path": "purchase/purchase-record",
+          "style": {
+            "navigationBarTitleText": "采购记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "offset": "70px",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "purchase/create-purchase",
+          "style": {
+            "navigationBarTitleText": "新增采购",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "purchase/purchase-choose-device",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "purchase/purchase-detail",
+          "style": {
+            "navigationBarTitleText": "采购详情",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "purchase/purchase-apply",
+          "style": {
+            "navigationBarTitleText": "采购审批",
+            "transparentTitle": "none",
+            "navigationStyle": "custom"
+          }
+        },
+        //保险管理
+        {
+          "path": "insurance/insurance-manage",
+          "style": {
+            "navigationBarTitleText": "保险单管理",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "insurance/create-insurance",
+          "style": {
+            "navigationBarTitleText": "新增保险单"
+          }
+        },
+        {
+          "path": "insurance/insurance-choose-machine",
+          "style": {
+            "navigationBarTitleText": "选择车辆"
+          }
+        },
+        {
+          "path": "insurance/insurance-apply",
+          "style": {
+            "navigationBarTitleText": "保险单审批",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "insurance/insurance-detail",
+          "style": {
+            "navigationBarTitleText": "保险单详情",
+            "navigationStyle": "custom"
+          }
+        },
+        //设备-电池管理
+        {
+          "path": "battery/battery-manage",
+          "style": {
+            "navigationBarTitleText": "电池管理",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "battery/update-battery-info",
+          "style": {
+            "navigationBarTitleText": "修改电池",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "battery/choose-part-list",
+          "style": {
+            "navigationBarTitleText": "选择配件",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "battery/change-battery",
+          "style": {
+            "navigationBarTitleText": "电池信息",
+            "transparentTitle": "none"
+          }
+        },
+        //设备-资产管理
+        {
+          "path": "property/device_financing",
+          "style": {
+            "navigationBarTitleText": "融资管理",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        {
+          "path": "property/updata-financing",
+          "style": {
+            "navigationBarTitleText": "修改融资成本",
+            "transparentTitle": "none",
+            "bounce": false
+          }
+        },
+        {
+          "path": "property/device_depreciation",
+          "style": {
+            "navigationBarTitleText": "折旧成本",
+            "transparentTitle": "none",
+            "bounce": false,
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000"
+            }
+          }
+        },
+        // 电池巡检
+        {
+          "path": "battery-polling/battery-polling-all",
+          "style": {
+            "navigationBarTitleText": "巡检记录",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "battery-polling/create-battery-polling",
+          "style": {
+            "navigationBarTitleText": "新增电池巡检单",
+            "transparentTitle": "none"
+          }
+        },
+        {
+          "path": "battery-polling/battery-polling-detail",
+          "style": {
+            "navigationBarTitleText": "电池巡检详情",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "battery-polling/battery-polling-check",
+          "style": {
+            "navigationBarTitleText": "电池巡检单审批",
+            "bounce": false,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "inventory/inventory",
+          "style": {
+            "navigationBarTitleText": "库存查询",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "inventory/inventory-detail",
+          "style": {
+            "navigationBarTitleText": "",
+            "transparentTitle": "none",
+            "enablePullDownRefresh": true,
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "report/report",
+          "style": {
+            "navigationBarTitleText": "设备报告",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/constructionDetail",
+          "style": {
+            "navigationBarTitleText": "施工地详情",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/machineChoose",
+          "style": {
+            "navigationBarTitleText": "选择设备",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/machineAdd",
+          "style": {
+            "navigationBarTitleText": "添加其他设备",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/choose-work-content",
+          "style": {
+            "navigationBarTitleText": "选择作业内容",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/settle",
+          "style": {
+            "navigationBarTitleText": "快捷合同",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/settleNotarize",
+          "style": {
+            "navigationBarTitleText": "确认结算",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "gps/warehouseDetail",
+          "style": {
+            "navigationBarTitleText": "仓库详情",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        },
+        {
+          "path": "constructionDetail",
+          "style": {
+            "navigationBarTitleText": "施工地",
+            "transparentTitle": "none",
+            "pullToRefresh": {
+              "style": "circle",
+              "color": "#E60000",
+              "offset": "50px"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/login": {
+      "network": "all",
+      "packages": [
+        "businessPages"
+      ]
+    },
+    "pages/main/home/home-static": {
+      "network": "all",
+      "packages": [
+        "otherPages"
+      ]
+    },
+    "pages/main/home/home-function-list": {
+      "network": "all",
+      "packages": [
+        "deviceNoticePages"
+      ]
+    },
+    "pages/main/map": {
+      "network": "all",
+      "packages": [
+        "devicePages"
+      ]
+    },
+    "pages/main/business": {
+      "network": "all",
+      "packages": [
+        "contractPages"
+      ]
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F9F9F9",
+    "backgroundColor": "#F9F9F9",
+    "bounce": "none"
+    // "usingComponents": {
+    //   "wxml-to-canvas": "/wxcomponents/wxml-to-canvas"
+    // }
+  },
+  "condition": {
+    //模式配置，仅开发期间生效
+    "current": 0, //当前激活的模式(list 的索引项)
+    "list": [
+      {
+        "name": "合同列表", //模式名称
+        "path": "/pages/main/business", //启动页面，必选
+        "query": ""
+      },
+      {
+        "name": "客户管理", //模式名称
+        "path": "/otherPages/linkman/custom-detail", //启动页面，必选
+        "query": "id=1669153193560190978"
+      },
+      {
+        "name": "设备控制", //模式名称
+        "path": "/devicePages/control/lock-vehicle" //启动页面，必选
+      },
+      {
+        "name": "设备分布", //模式名称
+        "path": "/pages/main/map" //启动页面，必选
+      },
+      {
+        "name": "操作证", //模式名称
+        "path": "/otherPages/logistics/operationList" //启动页面，必选
+      },
+      {
+        "name": "设备监控", //模式名称
+        "path": "/devicePages/monitor/device-monitor-detail", //启动页面，必选
+        "query": "licenseId=SPS10CC01368" //启动参数，在页面的onLoad函数里面得到
+      },
+      {
+        "name": "新建合同", //模式名称
+        "path": "/contractPages/contract/create-contract" //启动页面，必选
+      },
+      {
+        "name": "索赔管理", //模式名称
+        "path": "/subBusiness/subBusiness" //启动页面，必选
+      },
+      {
+        "name": "新增个人", //模式名称
+        "path": "/otherPages/linkman/person-creat" //启动页面，必选
+      },
+      {
+        "name": "首页", //模式名称
+        "path": "/pages/main/home/home-static" //启动页面，必选
+      },
+      {
+        "name": "business", //模式名称
+        "path": "/pages/main/business" //启动页面，必选
+      }
+    ]
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#808080",
+    "selectedColor": "#E60000",
+    "list": [
+      {
+        // "pagePath": "pages/main/charts",
+        "pagePath": "pages/main/home/home-static",
+        "text": "首页",
+        "iconPath": "static/tab_button_home_nor.png",
+        "selectedIconPath": "static/tab_button_home_sel.png"
+      },
+      {
+        "pagePath": "pages/main/map",
+        "text": "设备",
+        "iconPath": "static/tab_button_car_nor.png",
+        "selectedIconPath": "static/tab_button_car_sel.png"
+      },
+      {
+        "pagePath": "pages/main/business",
+        "text": "业务",
+        "iconPath": "static/tab_button_js_nor.png",
+        "selectedIconPath": "static/tab_button_js_sel.png"
+      },
+      {
+        "pagePath": "pages/main/setting",
+        "text": "我的",
+        "iconPath": "static/tab_button_mine_nor.png",
+        "selectedIconPath": "static/tab_button_mine_sel.png"
+      }
+    ],
+    "midButton": {
+      "width": "80px",
+      "height": "70px",
+      "iconPath": "static/homescan.png",
+      "iconWidth": "70px"
+    }
+  }
+}

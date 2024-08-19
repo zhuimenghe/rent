@@ -1,0 +1,233 @@
+.contract-head {
+  padding: 24rpx 0 18rpx 0;
+  @include flex(row, center);
+
+  .iconfont {
+    font-size: 54rpx;
+    margin-right: 20rpx;
+    color: $uni-color-warning;
+  }
+
+  &.esign {
+    .iconfont {
+      color: #6a5fff;
+    }
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .sub {
+    @include flex(row, center, space-between);
+    color: $uni-text-color-gray;
+    font-size: 24rpx;
+
+    .action {
+      color: $uni-color-primary;
+    }
+  }
+
+  &.hairline {
+    @include hairline-bottom();
+  }
+}
+
+.card {
+  box-shadow: 0rpx 0rpx 12rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 10rpx;
+  margin: 0 16rpx;
+  margin-top: 24rpx;
+  overflow: hidden;
+
+  .head {
+    height: 92rpx;
+    padding: 0 28rpx;
+    font-weight: bold;
+    font-size: 30rpx;
+    @include flex(row, center);
+    @include hairline-bottom();
+
+    .icon {
+      position: relative;
+      margin-right: 8rpx;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 30rpx;
+        height: 30rpx;
+        background: rgba(230, 0, 0, 0.18);
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 18rpx;
+        height: 18rpx;
+        background: rgba(230, 0, 0, 1);
+      }
+    }
+  }
+
+  .head-flex {
+    @include flex(row, center, space-between);
+    view {
+      @include flex(row, center, space-between);
+    }
+    .add-btn {
+      font-size: $uni-font-size-base;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      color: $uni-color-primary;
+    }
+  }
+  .content {
+    padding: 0 28rpx;
+  }
+  .img-verified {
+    width: 91rpx;
+    height: 33rpx;
+  }
+  .text-success {
+    color: #0cb60e;
+    font-size: $uni-font-size-base;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 400;
+  }
+
+  .actions {
+    background: $uni-bg-color-grey;
+    height: 64rpx;
+    @include flex(row, center, flex-end);
+    color: $uni-color-warning;
+
+    .action {
+      // flex: 1;
+      width: 25%;
+      @include flex(row, center, center);
+    }
+  }
+
+  .contact {
+    @include hairline-bottom();
+    &:last-child {
+      @include hairline-none();
+    }
+
+    padding: 16rpx 0 0;
+    .iconfont {
+      display: block;
+      width: 56rpx;
+      height: 56rpx;
+      line-height: 56rpx;
+      text-align: center;
+      background: rgba(230, 0, 0, 0.08);
+      border-radius: 100%;
+      color: $uni-color-primary;
+    }
+  }
+  .bg-gray-lighter {
+    background: #f6f6f6;
+  }
+  .edit-btn {
+    font-size: $uni-font-size-base;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 400;
+    color: #f08200;
+    i {
+      color: #f08200 !important;
+      font-size: 24rpx;
+      background: none !important;
+    }
+  }
+  .wenhao {
+    width: 30rpx;
+    height: 30rpx;
+    background: #fe931f;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 12px;
+  }
+  .text {
+    font-size: 28rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 400;
+    color: #222222;
+    margin-left: 10rpx;
+    margin-right: -13rpx;
+  }
+  .pdlr28 {
+    padding-left: 28rpx;
+    padding-right: 28rpx;
+  }
+  .fs32 {
+    font-size: 32rpx;
+    color: #222222;
+  }
+  .margin-top5 {
+    margin-top: 3px;
+  }
+  .margin-bottom8 {
+    margin-bottom: 8px;
+  }
+  .margin-top11 {
+    margin-top: 11px;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+    max-width: 15em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .popup-dialog {
+    width: 546rpx;
+    height: 300rpx;
+    background: #ffffff;
+    border-radius: 10rpx;
+    .popup-title{
+      padding-top: 30rpx;
+      text-align: center;
+      font-size: 32rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      color: rgba(0,0,0,0.85);
+    }
+    .text{
+    font-size: 28rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 400;
+    color: rgba(0,0,0,0.85);
+    margin: 20rpx 45rpx;
+    text-indent: 56rpx;
+    line-height: 45rpx;
+    }
+ 
+  }
+  .popup-btn{
+    font-size: 32rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 400;
+    color: #FE931F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 33rpx;
+    }
+
+  .imgs {
+    padding: 28rpx 0 4rpx 28rpx;
+
+    .img {
+      width: 204rpx;
+      height: 204rpx;
+      margin-right: 24rpx;
+      margin-bottom: 24rpx;
+    }
+  }
+}

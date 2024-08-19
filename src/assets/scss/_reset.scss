@@ -1,0 +1,77 @@
+view,text,scroll-view,image,input,textarea,navigator,cover-view,bottom-wrapper,cover-image,form,swiper-item{
+  box-sizing: border-box;
+}
+
+navigator{
+  transition: opacity 0.3s ease;
+  &:active{
+    opacity: 0.7;
+  }
+}
+.navigator-hover{
+  background-color: inherit;
+  opacity: 1;
+}
+
+image{
+  height:auto
+}
+
+//uni-ui
+uni-button.borderless{
+  border:none!important;
+}
+uni-button[type=default]{
+  background-color:transparent;
+	color:var(--text-color);
+}
+
+//quill reset
+.ql-editor ul[data-checked=true]{
+  color: var(--text-color-gray);
+  text-decoration:line-through;
+  >li:before {
+    font-family: "iconfont" !important;
+    content: "\e608";
+    // font-size: 32rpx;
+    line-height: 1;
+  }
+}
+.ql-editor ul[data-checked=false] {
+  // color: var(--text-color);
+  >li:before {
+    font-family: "iconfont" !important;
+    content: "\e609";
+    // font-size: 32rpx;
+    line-height: 1;
+  }
+}
+.ql-editor{
+  li{
+    padding-left:48rpx;
+    line-height:1.6;
+    &:before{
+      width: 48rpx;
+      margin-left:-48rpx;
+    }
+  }
+}
+.ql-container img{
+  &.expand{
+    height: auto;
+  }
+  display:block;
+  width:100%;
+  margin:0 auto;
+  margin-top:18rpx;
+  margin-bottom:18rpx;
+  height: 150rpx;
+  object-fit: cover;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.ql-container{
+  height: auto;
+  min-height: auto;
+}

@@ -1,0 +1,35 @@
+[{
+	"isFlow": true,
+	"signerType": "tenantry",
+	"actorIndentityType": "0",
+	"postionList": [{
+		"ex": 78,
+		"ey": 78,
+		"px": 173,
+		"py": 5,
+		"personType": "customer_contact",
+		"keyWord": "承租方签字",
+		"signDateBeanType": "0"
+	},{
+		"ex": 78,
+		"ey": 78,
+		"px": 173,
+		"py": 5,
+		"personType": "customer_contact",
+		"keyWord": "承租方签字",
+		"signDateBeanType": "0"
+	}]
+}, {
+	"isFlow": true,
+	"signerType": "leaseholder",
+	"actorIndentityType": "0",
+	"postionList": [{
+		"ex": 78,
+		"ey": 78,
+		"px": 185,
+		"py": -5,
+		"personType": "business_manager",
+		"keyWord": "出租方业务员签字",
+		"signDateBeanType": "0"
+	}]
+}]

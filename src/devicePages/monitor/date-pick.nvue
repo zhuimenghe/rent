@@ -1,0 +1,79 @@
+<template>
+	<view v-if="showCalendar">
+    <s-sany-popup ref="customToast"></s-sany-popup>
+		<view class="calendar-content">
+			<!-- 插入模式 -->
+			<uni-calendar 
+			:date="defaultDate" 
+			:today="today" 
+			:endDate="today"
+			@close="close" 
+			@change="change" 
+			@monthSwitch="monthSwitch" 
+			@confirm="confirm" 
+			/>
+		</view>
+	</view>
+</template>
+
+<script>
+	// import uniCalendar from '@/components/common/uni-calendar/uni-calendar.vue'
+	import hoursUtil from '@/common/util/day-working-hours.js';
+	export default {
+		components: {
+			// uniCalendar
+		},
+		data() {
+			return {
+				showCalendar: false,
+				defaultDate: "",
+				today:""
+
+			}
+		},
+		created() {
+			let self = this;
+			this.today = hoursUtil.dateSFormat(new Date().getTime());
+			uni.$on('default-pick-date', (data) => {
+				self.defaultDate = data.defaultDate
+				console.log(self.defaultDate)
+			
+			})
+		},
+		onReady() {
+			this.$nextTick(() => {
+				console.log("$nextTick")
+				this.showCalendar = true
+			})
+
+		},
+		methods: {
+			confirm(e) {
+				console.log('confirm 返回:', e)
+				//数据返回
+				uni.$emit('pick-back-date', {  
+				    date:e.fulldate
+				});
+				const subNVue = uni.getSubNVueById('pick')
+				subNVue.hide('fade-out', 300)
+			},
+			close() {
+				console.log('close')
+				const subNVue = uni.getSubNVueById('pick')
+				subNVue.hide('fade-out', 300)
+			},
+			monthSwitch(e) {
+				console.log('monthSwitchs 返回:', e)
+			}
+		}
+	}
+</script>
+
+<style>
+	.calendar-content {
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+</style>

@@ -1,0 +1,302 @@
+{
+    /*生产*/
+    "name" : "三一智慧租赁",
+    "appid" : "__UNI__1C75123",
+    "description" : "租赁",
+    "versionName" : "1.0.1",
+    "versionCode" : 1010,
+    "transformPx" : false,
+    "runmode" : "liberate",
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : false,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持  
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Maps" : {},
+            "Share" : {},
+            "Push" : {},
+            "VideoPlayer" : {},
+            "Statistic" : {},
+            "Webview-x5" : {},
+            "Contacts" : {}
+        },
+        "privacy" : {
+            "prompt" : "template",
+            "template" : {
+                "title" : "欢迎使用三一高机智慧租赁",
+                "message" : "1、为保护您的账户不被恶意登录和操作，在业务操作时，我们会收集您的手机设备序列号、MAC、设备型号信息；<br/>2、,为保证您在使用过程中能够上传和下载附件，保存文件数据，我们需要申请您的手机存储权限和访问相机、相册的权限；当您使用本应用中的地图及设备监控与设备维护功能时，我们需要申请您的位置信息；当您使用客户管理快捷录入客户信息时，我们需要申请访问您的通讯录；<br/>3、本应用的部分服务使用了第三方的软件开发包（SDK），在使用对应服务时，会收集手机设备序列号、MAC、位置信息。<br/><br/>对本应用涉及用户信息使用的内容，我们在<a href =\"https://test-rental.sany.com.cn/web/protocol.html\">《隐私政策》</a>和<a href=\"https://test-rental.sany.com.cn/web/privacy-sdk.html\">《第三方SDK使用情况》</a>中均已逐一列出。<br/>点击“同意”即代表您已审慎阅读并充分理解，并且接受以上条款的内容。",
+                "buttonAccept" : "同意",
+                "buttonRefuse" : "拒绝",
+                "second" : {
+                    "title" : "温馨提示",
+                    "message" : "　　进入应用前，你需先阅读并同意<a href =\"https://rental.sany.com.cn/protocol.html\">《隐私政策》</a>和<a href=\"https://rental.sany.com.cn/privacy-sdk.html\">《第三方SDK使用情况》</a>，否则我们将无法为您提供服务。",
+                    "buttonAccept" : "同意并继续",
+                    "buttonRefuse" : "退出应用"
+                }
+            }
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissionPhoneState" : {
+                    "request" : "none",
+                    "prompt" : "为保证您正常、安全地使用，需要获取设备识别码（部分手机提示为获取手机号码）使用权限，请允许。"
+                },
+                "permissionExternalStorage" : {
+                    "request" : "none",
+                    "prompt" : "应用保存运行状态等信息，需要获取读写手机存储（系统提示为访问设备上的照片、媒体内容和文件）权限，请允许。"
+                },
+                "schemes" : [ "nvrapp" ],
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "urltypes" : [
+                    {
+                        "urlidentifier" : "com.test.nvrapp",
+                        "urlschemes" : [ "nvrapp" ]
+                    }
+                ],
+                "privacyDescription" : {
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "用于获取您的当前位置，以便管理车辆",
+                    "NSLocationWhenInUseUsageDescription" : "用于获取您的当前位置，以便管理车辆",
+                    "NSLocationAlwaysUsageDescription" : "用于获取您的当前位置，以便管理车辆",
+                    "NSPhotoLibraryUsageDescription" : "若不允许,你将无法把本地相册图片及视频内容上传",
+                    "NSPhotoLibraryAddUsageDescription" : "若不允许,您将无法将图片保存至本地相册",
+                    "NSCameraUsageDescription" : "若不允许,您将无法拍摄照片图片上传",
+                    "NSMicrophoneUsageDescription" : "是否允许使用麦克风",
+                    "NSContactsUsageDescription" : "若不允许,您将无法选择本地联系人"
+                },
+                "idfa" : false,
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "applinks:rentalbay.dcloud.net.cn" ]
+                    }
+                }
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "push" : {
+                    "unipush" : {}
+                },
+                "payment" : {},
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxae8f5fb8f8eafd0b",
+                        "UniversalLinks" : "https://rental.sany.com.cn/#/login"
+                    }
+                },
+                "maps" : {
+                    "amap" : {
+                        //测试
+                        // "appkey_android" : "e87772913a7cd4df42e27c82f1c0b3d5", //测试-android
+                        // "appkey_ios" : "455ce55e97f6959c9dbf978af6c45be6" ,//测试-ios
+                        //生产
+                        "appkey_android" : "81b38261c58cb65bc71d7186aeb1e182", //生产-android
+                        "appkey_ios" : "f2abd65f873b7629fe67b3576c524bc8" //生产-ios
+                    }
+                },
+                "ad" : {},
+                "statics" : {
+                    "umeng" : {
+                        "appkey_ios" : "62143c5c317aa8776055696f",
+                        "channelid_ios" : "AppStore",
+                        "appkey_android" : "621437422b8de26e11b89daf",
+                        "channelid_android" : "Android"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "retina47" : "",
+                        "retina55" : "",
+                        "retina40" : ""
+                    },
+                    "storyboard" : "static/CustomStoryboard.zip"
+                },
+                "androidStyle" : "default",
+                "iosStyle" : "storyboard",
+                "useOriginalMsgbox" : false,
+                "android" : {
+                    "xhdpi" : "res/launch.9.png",
+                    "hdpi" : "res/launch.9.png",
+                    "xxhdpi" : "res/launch.9.png"
+                }
+            },
+            "icons" : {
+                //图标
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png"
+                    },
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png"
+                    }
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx013a2465b488a32e",
+        "optimization" : {
+            "subPackages" : true
+        },
+        "setting" : {
+            "urlCheck" : false,
+            "minified" : true
+        },
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "你的位置信息将用于地图相关功能的展示" // 高速公路行驶持续后台定位
+            }
+        },
+        "requiredPrivateInfos":[
+            "getLocation"
+        ]
+    },
+    "mp-alipay" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "mp-baidu" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "h5" : {
+        "uniStatistics" : {
+            "enable" : true
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    // 腾讯地图秘钥 https://lbs.qq.com/dev/console/key/manage
+                    "key" : "QCABZ-DS363-CDF34-YDURG-IXKPJ-IZFST"
+                }
+            }
+        }
+    },
+    "mp-qq" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "uniStatistics" : {
+        "enable" : true,
+        "version" : "1"
+    },
+    "mp-jd" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "mp-kuaishou" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "mp-lark" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "quickapp-webview-huawei" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    "quickapp-webview-union" : {
+        "uniStatistics" : {
+            "enable" : true
+        }
+    }
+}
+/* 5+App特有相关 */
+

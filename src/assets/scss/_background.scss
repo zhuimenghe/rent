@@ -1,0 +1,138 @@
+.line-primary,
+.lines-primary {
+  color: $uni-color-primary !important;
+}
+
+.line-success,
+.lines-success {
+  color: $uni-color-success;
+}
+
+.line-warn,
+.lines-warn {
+  color: $uni-color-warning;
+}
+
+.line-error,
+.lines-error {
+  color: $uni-color-error;
+}
+
+.line-gray,
+.lines-gray {
+  color: $uni-text-color-gray;
+}
+
+.line-primary,
+.line-primary::after,
+.lines-primary::after {
+  border-color: $uni-color-primary !important;
+}
+
+.line-success,
+.line-success::after,
+.lines-success::after {
+  border-color: $uni-color-success!important;
+}
+
+.line-warn,
+.line-warn::after,
+.lines-warn::after {
+  border-color: $uni-color-warning!important;
+}
+
+.line-error,
+.line-error::after,
+.lines-error::after {
+  border-color: $uni-color-error!important;
+}
+
+.line-gray,
+.line-gray::after,
+.lines-gray::after {
+  color: $uni-text-color-gray;
+}
+
+.bg-page {
+  background-color: $uni-bg-color !important;
+}
+
+.bg-primary {
+  background-color: $uni-color-primary !important;
+  color: $uni-text-color-inverse !important;
+}
+
+.bg-primary-linear-right {
+  background-image: linear-gradient(to right, rgba(25, 137, 250, 0.3), rgba(25, 137, 250, 1));
+  color: $uni-text-color-inverse;
+}
+
+.bg-success {
+  background-color: $uni-color-success!important;
+  color: $uni-text-color-inverse!important;
+}
+
+.bg-warning{
+  background-color: #e60000 !important;
+  color: #fff !important;
+}
+
+.bg-success.light {
+  background-color: #EFFBEA;
+  color: $uni-color-success;
+}
+
+.bg-blue {
+  background-color: #1890FF;
+  color: $uni-text-color-inverse;
+}
+
+.bg-blue.light {
+  background-color: #cce6ff;
+  color: #1890FF;
+}
+
+.bg-warn {
+  background-color: $uni-color-warning;
+  color: $uni-text-color-inverse;
+}
+
+.bg-warn.light {
+  color: $uni-color-warning;
+  background-color: #FFF6EA;
+}
+
+.bg-error {
+  background-color: $uni-color-error!important;
+  color: $uni-text-color-inverse!important;
+}
+
+.bg-error.light {
+  background-color: #FFE6E5;
+  color: $uni-color-error;
+}
+
+.bg-gray {
+  background-color: $uni-text-color-gray;
+  color: $uni-text-color-inverse;
+}
+
+.bg-gray.light {
+  background-color: #f5f5f5;
+  color: $uni-text-color-gray;
+}
+
+.bg-light-gray {
+  background-color: $uni-text-color-light-gray;
+  color: $uni-text-color-inverse;
+}
+
+.bg-light-gray.light {
+  background-color: #f5f5f5;
+  color: $uni-text-color-light-gray;
+}
+
+.bg-disable {
+  background-color: $uni-bg-color-disable;
+  color: $uni-text-color-inverse;
+}

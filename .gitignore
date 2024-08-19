@@ -1,0 +1,31 @@
+# Java class files
+*.class
+.DS_Store
+
+# IntelliJ
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+
+
+#忽略文件
+.VSCodeCounter
+/dist
+/unpackage
+/node_modules
+/package-lock.json
+
+#vscode
+.vscode
+
+#npm
+package-lock.json
+yarn.lock
+dvpn-app231026.code-workspace
+generate_directory_structure_md.py
+project_structure.md

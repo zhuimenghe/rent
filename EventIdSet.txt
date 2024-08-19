@@ -1,0 +1,14 @@
+device_administrative, 设备管理, 0
+contract_administrative, 合同管理, 0
+contract_cxecute, 合同执行, 0
+settle_administrative, 结算管理, 0
+esign_administrative, 电签管理, 0
+sublet_administrative, 转租管理, 0
+statistics_analyse, 统计分析, 0
+property_administrative, 资产管理, 0
+part_administrative, 配件管理, 0
+logistics_administrative, 物流管理, 0
+customer_administrative, 客户管理, 0
+bussiness_tool, 业务工具, 0
+home_fuction, 首页功能, 0
+service_task, 服务任务, 0

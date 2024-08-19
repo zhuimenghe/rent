@@ -1,0 +1,60 @@
+/* 按钮样式 */
+.fixed-button {
+  padding: 0 10px;
+  position: fixed;
+  display: flex;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  height: 60px;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  z-index: 100;
+  padding-bottom: calc(env(safe-area-inset-bottom) - 10px);
+  transition: transform 1.5s ease, opacity 1.5s ease;
+  .submit-button {
+    display: flex;
+    flex: 1;
+    height: 40px;
+    border-radius: 5upx;
+    background: #e60000;
+    font-size: 16px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    // margin-right: 10px;
+  }
+
+  .cancel-button {
+    display: flex;
+    flex: 1;
+    height: 40px;
+    border-radius: 5upx;
+    background: #d8d8d8;
+    font-size: 16px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    // margin-right: 10px;
+  }
+  .button {
+    margin-right: 10rpx;
+  }
+  .button + .button {
+    margin-left: 10rpx;
+  }
+
+  .button:last-child {
+    margin-right: 0rpx;
+  }
+
+  /* 隐藏状态 */
+  &.hidden {
+    transform: translateY(100%); /* 向下移出屏幕 */
+    opacity: 0; /* 透明度变为0 */
+  }
+}

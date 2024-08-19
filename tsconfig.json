@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir":"dist",
+    "types": [
+      "uni-app",
+      "html5plus",
+      "miniprogram-api-typings",
+      "mini-types/types/api"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@c/*": ["./src/components/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules",".vscode","dist"]
+}

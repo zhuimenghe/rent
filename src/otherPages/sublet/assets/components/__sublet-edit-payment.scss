@@ -1,0 +1,74 @@
+.uni-tip {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  flex-direction: column;
+  /* #endif */
+  padding: 15px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  .edit-payment {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 4px;
+
+    .model-tag {
+      display: flex;
+      padding: 10px 0px;
+      flex-direction: row;
+      justify-content: space-between;
+      border-color: $uni-bg-color-grey;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      color: $uni-text-color;
+      font-weight: bold;
+      font-size: $uni-font-size-base;
+      align-items: center;
+    }
+
+    .processing-payment {
+      padding: 10px 0px;
+      margin: 0px 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-color: $uni-bg-color-grey;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      color: $uni-text-color;
+      font-size: $uni-font-size-base;
+      .input-label {
+        width: 72px;
+        min-width: 72px;
+      }
+    }
+  }
+  .uni-tip-group-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    .uni-tip-button {
+      flex: 1;
+      text-align: center;
+      padding: 8px;
+
+      font-size: $uni-font-size-base;
+    }
+
+    .pop-cancel {
+      margin-right: 8px;
+      color: $uni-text-color-gray;
+      background: $uni-bg-color-grey;
+      border-radius: 4px;
+    }
+
+    .pop-confirm {
+      color: #ffffff;
+      margin-left: 8px;
+      background: $uni-color-primary;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '@/uni.scss';
+
+/**
+ * 每个model的父布局
+ */
+.model-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px;
+	background: #ffffff;
+	border-radius: 4px;
+}
+
+/**
+ * model的title 行布局
+ */
+.model-tag {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-color: $uni-bg-color-grey;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	color: $uni-text-color;
+	font-size: $uni-font-size-lg;
+	padding: 15px;
+	align-items: center;
+	font-weight: bold;
+}
+
+/**
+ * 二级model title行布局
+ */
+.sub-model-tag {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-color: $uni-bg-color-grey;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	color: $uni-text-color;
+	font-size: $uni-font-size-base;
+	padding: 10px 15px;
+	align-items: center;
+}
+
+/**
+ * 带有input的item行布局
+ */
+.cell-input-view {
+	display: flex;
+		flex-direction: row;
+		flex: 1;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 10px;
+		font-size: $uni-font-size-base;
+		border-bottom: 1px dotted #F0F2F4;
+}
+
+/**
+ * 带有input的item行布局--key
+ */
+.cell-input-view-left {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: flex-start;
+	color: $uni-text-color;
+	font-size: $uni-font-size-base;
+}
+
+/**
+ * 带有input的item行布局 -value
+ */
+.cell-input-view-right {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: flex-start;
+	color: $uni-text-color;
+	font-size: $uni-font-size-base;
+}
+
+/**
+ * 带有input的item行布局 -input
+ */
+.input-style {
+	flex: 1;
+	padding-right: 10px;
+	text-align: right;
+	color: $uni-text-color;
+	font-size: $uni-font-size-base;
+	line-height: 16px;
+}
+
+.cell-section-view-width {
+	display: flex;
+	flex: 2;
+	color: $uni-text-color-gray;
+	font-size: $uni-font-size-sm;
+	align-items: center;
+	justify-content: center;
+}
+
+.cell-section-view {
+	display: flex;
+	height: 40px;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.cell-view {
+	font-size: $uni-font-size-sm;
+	color: $uni-text-color
+}

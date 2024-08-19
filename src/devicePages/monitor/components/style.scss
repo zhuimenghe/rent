@@ -1,0 +1,83 @@
+.chart-content {
+  background: #ffffff;
+  font-size: 14px;
+  margin: 25rpx;
+  border-radius: 4px;
+  &.p{
+		padding:20rpx 15rpx;
+  }
+  .box{
+		padding:20rpx 15rpx;
+  }
+  .line{
+		padding:20rpx 22rpx 20rpx 15rpx;
+		@include flex(row,center,space-between);
+		color:$uni-text-color-grey;
+		@include hairline-bottom(#e6e6e6);
+		&:last-child{
+			@include hairline-none();
+		}
+		&.bl{
+			@include hairline-none();
+		}
+	}
+  ::v-deep .uni-tab .uni-tab-scroll-active{
+    border-bottom-width: 2px;
+  }
+  ::v-deep .picker .value{
+    font-size: $uni-font-size-sm;
+  }
+}
+
+.chart-tag {
+  margin-top: 5px;
+  // margin-left: 16px;
+  // margin-right: 16px;
+  margin-bottom: 5px;
+}
+
+.chart-tag-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chart-tag-title {
+  margin: 16px;
+}
+
+.chart-month {
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chart-tag span {
+  margin-left: 4px;
+  // font-size: $uni-font-size-lg;
+  color: #000000;
+  font-weight: bold;
+}
+
+.chart-tips {
+  padding:3rpx 6rpx;
+  background: #F0AD4E;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 11px;
+  margin-top: 5px;
+  // margin-left: 16px;
+  // margin-right: 16px;
+}
+
+.charts-container {
+  padding-bottom: 16px;
+}
+
+.charts {
+  width: 710upx;
+  height: 500upx;
+}

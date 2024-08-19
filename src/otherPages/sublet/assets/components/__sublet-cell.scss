@@ -1,0 +1,78 @@
+.sum-view-bg {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.cell-view {
+  border-width: 1px;
+  border-color: #eeeeee;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cell-input-view-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $uni-font-size-base;
+}
+
+.cell-input-view {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: $uni-line-color 1px solid;
+  font-size: $uni-font-size-base;
+}
+
+.tilte-view-sub {
+  border-bottom-width: 1px;
+  border-bottom-color: #eeeeee;
+  border-bottom-style: solid;
+}
+
+.cell-input-view-left {
+  display: flex;
+  min-width: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  color: $uni-text-color;
+  font-size: $uni-font-size-base;
+}
+
+.cell-input-view-left-top {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  color: $uni-text-color;
+  font-size: $uni-font-size-base;
+}
+
+.cell-input-view-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  color: $uni-text-color;
+  font-size: $uni-font-size-base;
+}
+
+.input-style {
+  flex: 1;
+  text-align: right;
+}
+
+.input-style-center {
+  flex: 1;
+  text-align: center;
+}

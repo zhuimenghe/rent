@@ -1,0 +1,301 @@
+/* ==================
+          布局
+ ==================== */
+
+/*  -- flex弹性布局 -- */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.basis-xs {
+  flex-basis: 20%;
+}
+
+.basis-sm {
+  flex-basis: 40%;
+}
+
+.basis-df {
+  flex-basis: 50%;
+}
+
+.basis-lg {
+  flex-basis: 60%;
+}
+
+.basis-xl {
+  flex-basis: 80%;
+}
+
+.flex-sub {
+  flex: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+/* grid布局 */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid.grid-square {
+  overflow: hidden;
+}
+
+.grid.grid-square .cu-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom-left-radius: 6upx;
+  padding: 6upx 12upx;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid.grid-square>view>text[class*="cuIcon-"] {
+  font-size: 52upx;
+  position: absolute;
+  color: #8799a3;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid.grid-square>view {
+  margin-right: 20upx;
+  margin-bottom: 20upx;
+  border-radius: 6upx;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid.grid-square>view.bg-img image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.grid.col-1.grid-square>view {
+  padding-bottom: 100%;
+  height: 0;
+  margin-right: 0;
+}
+
+.grid.col-2.grid-square>view {
+  padding-bottom: calc((100% - 20upx)/2);
+  height: 0;
+  width: calc((100% - 20upx)/2);
+}
+
+.grid.col-3.grid-square>view {
+  padding-bottom: calc((100% - 40upx)/3);
+  height: 0;
+  width: calc((100% - 40upx)/3);
+}
+
+.grid.col-4.grid-square>view {
+  padding-bottom: calc((100% - 60upx)/4);
+  height: 0;
+  width: calc((100% - 60upx)/4);
+}
+
+.grid.col-5.grid-square>view {
+  padding-bottom: calc((100% - 80upx)/5);
+  height: 0;
+  width: calc((100% - 80upx)/5);
+}
+
+.grid.col-2.grid-square>view:nth-child(2n),
+.grid.col-3.grid-square>view:nth-child(3n),
+.grid.col-4.grid-square>view:nth-child(4n),
+.grid.col-5.grid-square>view:nth-child(5n) {
+  margin-right: 0;
+}
+
+.grid.col-1>view {
+  width: 100%;
+}
+
+.grid.col-2>view {
+  width: 50%;
+}
+
+.grid.col-3>view {
+  width: 33.33%;
+}
+
+.grid.col-4>view {
+  width: 25%;
+}
+
+.grid.col-5>view {
+  width: 20%;
+}
+
+/*  -- 内外边距 -- */
+$spacing-row:(
+  xs:$uni-spacing-row-xs,
+  sm:$uni-spacing-row-sm,
+  '':$uni-spacing-row-base,
+  lg:$uni-spacing-row-lg,
+  xl:$uni-spacing-row-xl
+);
+$spacing-col:(
+  xs:$uni-spacing-col-xs,
+  sm:$uni-spacing-col-sm,
+  '':$uni-spacing-col-base,
+  lg:$uni-spacing-col-lg,
+  xl:$uni-spacing-col-xl
+);
+
+$directions: left right top bottom lr tb '';
+$gaps:padding margin;
+$sizes:xs sm lg xl '';
+
+@mixin gap($gapName,$direction,$size){
+  @if $direction == top or $direction == bottom {
+    #{$gapName}-#{$direction}:map-get($spacing-col, $size)!important;
+  }@else if $direction == left or $direction == right {
+    #{$gapName}-#{$direction}:map-get($spacing-row, $size)!important;
+  }@else if $direction == lr {
+    #{$gapName}-left:map-get($spacing-row, $size)!important;
+    #{$gapName}-right:map-get($spacing-row, $size)!important;
+  }@else if $direction == tb {
+    #{$gapName}-top:map-get($spacing-col, $size)!important;
+    #{$gapName}-bottom:map-get($spacing-col, $size)!important;
+  }@else if $direction=='' {
+    #{$gapName}:map-get($spacing-col, $size) map-get($spacing-row, $size)!important;
+  }
+}
+//padding margin generate  ex:padding-lr-sm
+@each $gap in $gaps{
+  @each $dir in $directions{
+    @each $s in $sizes{
+      .#{$gap}#{if($dir != '', -#{$dir}, '')}#{if($s !='' , -#{$s}, '')}{
+        @include gap($gap,$dir,$s);
+      }
+    }
+  }
+}
+
+/* -- 浮动 --  */
+
+.cf::after,
+.cf::before {
+  content: " ";
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  -- border radius -- */
+.border-radius-lg {
+  border-radius: $uni-border-radius-lg
+}
+
+.border-radius-xl {
+  border-radius: $uni-border-radius-xl
+}
+
+// $uni-border-radius-sm: 4rpx;
+// $uni-border-radius-base: 6rpx;
+// $uni-border-radius-lg: 12rpx;
+// $uni-border-radius-xl: 18rpx;
+// $uni-border-radius-circle: 50%;

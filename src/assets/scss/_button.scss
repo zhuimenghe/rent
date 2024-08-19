@@ -1,0 +1,167 @@
+button.z-btn{
+  padding:0;
+	color:$uni-text-color;
+  text-align: center;
+  font-size:inherit;
+  line-height: 1;
+	background: transparent;
+	margin-left:0;
+	margin-right:0;
+	@include flex(row,center,center);
+	&::after{
+		border:none;
+	}
+}
+
+.btn-group{
+	display: inline-flex;
+	.z-btn{
+		&::after{
+			&:not(:last-child){
+				border-right-width: 0;
+			}
+			&:not(:first-child){
+				border-left-width: 0;
+			}
+		}
+		&:first-child,&:first-child::after{
+			border-top-left-radius: 1000rpx;
+			border-bottom-left-radius: 1000rpx;
+		}
+		&:last-child,&:last-child::after{
+			border-top-right-radius: 1000rpx;
+			border-bottom-right-radius: 1000rpx;
+		}
+	}
+}
+
+.z-btn {
+	position: relative;
+	border: 0upx;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	font-size: 28upx;
+	height: 64upx;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	overflow: visible;
+	// margin-left: initial;
+	transform: translate(0upx, 0upx);
+  // margin-right: initial;
+	background:transparent;
+	word-break: keep-all;
+}
+
+.z-btn::after {
+	display: none;
+}
+
+.z-btn:not([class*="bg-"]) {
+	background-color: transparent;
+}
+
+.z-btn[class*="line"] {
+	background-color: transparent;
+}
+
+.z-btn[class*="line"]::after {
+	content: " ";
+	display: block;
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid $uni-border-color;
+	// border: 1upx solid $uni-border-color;
+	transform: scale(0.5);
+	transform-origin: 0 0;
+	box-sizing: border-box;
+	border-radius: 12upx;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.z-btn.round[class*="line"]::after {
+	border-radius: 1000upx;
+}
+
+.z-btn[class*="lines"]::after {
+	border: 6upx solid $uni-border-color;
+}
+
+.z-btn[class*="bg-"]::after {
+	display: none;
+}
+
+.z-btn.sm {
+	padding: 0 24upx;
+	font-size: $uni-font-size-sm;
+	height: 52upx;
+}
+
+.z-btn.xs {
+	padding: 0 16upx;
+	font-size: $uni-font-size-xs;
+	height: 38upx;
+}
+
+.z-btn.lg {
+	padding: 0 40upx;
+	font-size: 32upx;
+	height: 80upx;
+}
+
+.z-btn.zyIcon.sm {
+	width: 48upx;
+	height: 48upx;
+}
+
+.z-btn.zyIcon {
+	width: 64upx;
+	height: 64upx;
+	border-radius: 500upx;
+	padding: 0;
+}
+
+button.zyIcon.lg {
+	width: 80upx;
+	height: 80upx;
+}
+
+.z-btn.shadow-blur::before {
+	top: 4upx;
+	left: 4upx;
+	filter: blur(6upx);
+	opacity: 0.6;
+}
+
+.z-btn.button-hover {
+	transform: translate(1upx, 1upx);
+}
+
+.block {
+	display: block;
+}
+
+.z-btn.block {
+	display: flex;
+	padding:0;
+}
+
+.z-btn[disabled] {
+	opacity: 0.6;
+	color: #ffffff;
+}
+
+.round {
+	border-radius: 5000upx;
+}
+
+.radius {
+	border-radius: 10upx;
+}

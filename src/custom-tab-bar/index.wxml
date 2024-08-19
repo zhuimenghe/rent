@@ -1,0 +1,16 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="c-tab-bar">
+  <view class="placeholder"></view>
+  <view class="inner">
+    <view class="item" wx:for="{{tabs}}" wx:for-item="t" wx:for-index="i" wx:key="i" bindtap="nav" data-path="{{t.pagePath}}" data-tab="{{t.tab}}"> 
+      <image
+        wx:if="{{t.tab!==undefined}}"
+        class="icon" 
+        mode="aspectFit"
+        src="{{active==t.tab?t.selectedIconPath:t.iconPath}}" 
+      ></image>
+      <view class="{{['text',(active==t.tab)?'selected':'']}}">{{ t.text }}</view>
+    </view>
+    <image class="mid" src="/static/homescan.png" mode="aspectFit" bindtap="scan"></image>
+  </view>
+</view>

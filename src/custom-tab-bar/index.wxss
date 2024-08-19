@@ -1,0 +1,58 @@
+.c-tab-bar {
+  overflow: visible;
+}
+.c-tab-bar .placeholder {
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: content-box;
+  height: 100rpx;
+}
+ .inner {
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: content-box;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 6px 0px rgba(169, 169, 169, 0.5);
+  overflow: visible;
+}
+ .inner .item {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: inherit;
+}
+.inner .item .icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-top:8rpx;
+  margin-bottom:8rpx;
+}
+.inner .item .icon.business {
+  width: 46rpx;
+  height: 46rpx;
+  margin-top:7rpx;
+  margin-bottom:7rpx;
+}
+ .inner .item .text {
+  color: #666;
+  font-size: 20rpx;
+}
+ .inner .item .text.selected {
+  color: #E60000;
+}
+ .inner .mid {
+  position: absolute;
+  left: 50%;
+  top: -35rpx;
+  transform: translateX(-64rpx);
+  width: 128rpx;
+  height: 128rpx;
+}

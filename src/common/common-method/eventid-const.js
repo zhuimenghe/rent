@@ -1,0 +1,14 @@
+export const Device_Administrative = "device_administrative"; //设备管理
+export const Contract_Administrative = "contract_administrative"; //合同管理
+export const Contract_Cxecute = "contract_cxecute"; //合同执行
+export const Settle_Administrative = "settle_administrative"; //结算管理
+export const Esign_Administrative = "esign_administrative"; //电签管理
+export const Sublet_Administrative = "sublet_administrative"; //转租管理
+export const Statistics_Analyse = "statistics_analyse"; //统计分析
+export const Property_Administrative = "property_administrative"; //资产管理
+export const Part_Administrative = "part_administrative"; //配件管理
+export const Logistics_Administrative = "logistics_administrative"; //物流管理
+export const Customer_Administrative = "customer_administrative"; //客户管理
+export const Bussiness_Tool = "bussiness_tool"; //业务工具
+export const Home_Fuction= "home_fuction"; //首页功能
+export const Service_Task= "service_task"; //服务任务
